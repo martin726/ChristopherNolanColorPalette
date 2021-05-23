@@ -26,8 +26,23 @@ for(i in seq_along(urls.CN)){
   download.file(urls.CN[i], destfile =  destinations[i])
 } # Worked!!
 
+### Download more images for Christopher Nolan movies ####
+
+url.CN2 <- c("https://i.pinimg.com/564x/5c/39/85/5c3985e1026e0ad22e0b2c16cd3856e2.jpg",
+             "https://i.pinimg.com/564x/f5/82/29/f5822932f3cfeaf5f3fdf7dfaebf1908.jpg",)
+
+img.files <- c("darkknight2.png", "darkknight3.png", )
+
+
 ####--- Color palette for Interstellar (2018) ---####
 
+dunkirk_images <- c("dunkirk1.png", "dunkirk2.png", "dunkirk3.png")
+
+dunkirk_cp <- lapply(dunkirk_images, function(x) create_palette(x, number_of_colors=8, type_of_variable = "categorical"))
+
+dunkirk_cp ### Worked!!!
+
+tenet_cp <- lapply(tenet)
 
 
 
