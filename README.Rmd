@@ -15,7 +15,9 @@ knitr::opts_chunk$set(
   fig.height = 1
 )
 
+devtools::document()
 devtools::install_github("martin726/ChristopherNolanColorPalette")
+
 ```
 
 # Christopher Nolan Palettes: A Menacing Sea of Dreams
