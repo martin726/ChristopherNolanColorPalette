@@ -3,7 +3,7 @@
 #' Use \code{\link{ChrisNolan_palette}} to construct palettes of desired length.
 #'
 #' @export
-ChrisNolan_palettes <- list(
+chrisnolan_palette <- list(
   BottleRocket1 = c("#A42820", "#5F5647", "#9B110E", "#3F5151", "#4E2A1E", "#550307", "#0C1707"),
   BottleRocket2 = c("#FAD510", "#CB2314", "#273046", "#354823", "#1E1E1E"),
   Rushmore1 = c("#E1BD6D", "#EABE94", "#0B775E", "#35274A" ,"#F2300F"),
@@ -30,10 +30,11 @@ ChrisNolan_palettes <- list(
 #' These are a handful of color palettes from Christopher Nolan movies. Currently, I only have a hanful of movies, but hope to include his entire filmography
 #'
 #' @param n Number of colors desired. Color schemes come from the website 
-#'   \href{https://indiefilming.com/people/christopher-nolan/}{Indie Film}.
+#'   \href{https://indiefilming.com/people/christopher-nolan/}{Indie Film} and others are from from the instagram page
+#' \href{https://www.instagram.com/colorpalette.cinema/}{colorpalette.cinema}.
 #'   If omitted, uses all colours.
 #' @param name Name of desired palette. Choices are:
-#'   \code{Tenet}, \code{Interstellar},  \code{DarkKnight},
+#'   \code{Tenet1}, \code{Tenet2}, \code{Interstellar},  \code{DarkKnight},
 #'   \code{Inception}, \code{Dunkirk},  \code{Prestige1},  \code{Prestige2}, 
 #'   \code{Prestige3}
 #' @param type Either "continuous" or "discrete". Use continuous if you want
@@ -43,20 +44,22 @@ ChrisNolan_palettes <- list(
 #' @export
 #' @keywords colors
 #' @examples
-#' ChrisNolan_palette("Tenet")
-#' ChrisNolan_palette("GrandBudapest1")
-#' ChrisNolan_palette("Cavalcanti1")
-#' ChrisNolan_palette("Cavalcanti1", 3)
+#' chrisnolan_palette("Tenet1")
+#' chrisnolan_palette("Tenet2")
+#' chrisnolan_palette("Interstellar1")
+#' chrisnolan_palette("Interstellar2")
+#' chrisnolan_palette("DarkKnight")
+#' 
 #'
 #' # If you need more colours than normally found in a palette, you
 #' # can use a continuous palette to interpolate between existing
 #' # colours
-#' pal <- wes_palette(21, name = "Zissou1", type = "continuous")
+#' pal <- chrisnolan_palette(21, name = "Tenet1", type = "continuous")
 #' image(volcano, col = pal)
-wes_palette <- function(name, n, type = c("discrete", "continuous")) {
+chrisnolan_palettes <- function(name, n, type = c("discrete", "continuous")) {
   type <- match.arg(type)
 
-  pal <- wes_palettes[[name]]
+  pal <- chrisnolan_palettes[[name]]
   if (is.null(pal))
     stop("Palette not found.")
 
