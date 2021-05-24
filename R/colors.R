@@ -1,9 +1,9 @@
 #' Complete list of palettes
 #'
-#' Use \code{\link{wes_palette}} to construct palettes of desired length.
+#' Use \code{\link{ChrisNolan_palette}} to construct palettes of desired length.
 #'
 #' @export
-wes_palettes <- list(
+ChrisNolan_palettes <- list(
   BottleRocket1 = c("#A42820", "#5F5647", "#9B110E", "#3F5151", "#4E2A1E", "#550307", "#0C1707"),
   BottleRocket2 = c("#FAD510", "#CB2314", "#273046", "#354823", "#1E1E1E"),
   Rushmore1 = c("#E1BD6D", "#EABE94", "#0B775E", "#35274A" ,"#F2300F"),
@@ -25,21 +25,17 @@ wes_palettes <- list(
   IsleofDogs2 = c("#EAD3BF", "#AA9486", "#B6854D", "#39312F", "#1C1718")
 )
 
-#' A Wes Anderson palette generator
+#' A Christopher Nolan palette generator
 #'
-#' These are a handful of color palettes from Wes Anderson movies.
+#' These are a handful of color palettes from Christopher Nolan movies. Currently, I only have a hanful of movies, but hope to include his entire filmography
 #'
-#' @param n Number of colors desired. Unfortunately most palettes now only
-#'   have 4 or 5 colors. But hopefully we'll add more palettes soon. All color
-#'   schemes are derived from the most excellent Tumblr blog:
-#'   \href{http://wesandersonpalettes.tumblr.com/}{Wes Anderson Palettes}.
+#' @param n Number of colors desired. Color schemes come from the website 
+#'   \href{https://indiefilming.com/people/christopher-nolan/}{Indie Film}.
 #'   If omitted, uses all colours.
 #' @param name Name of desired palette. Choices are:
-#'   \code{BottleRocket1}, \code{BottleRocket2},  \code{Rushmore1},
-#'   \code{Royal1}, \code{Royal2},  \code{Zissou1}, \code{Darjeeling1},
-#'   \code{Darjeeling2},  \code{Chevalier1} , \code{FantasticFox1} ,
-#'   \code{Moonrise1}, \code{Moonrise2}, \code{Moonrise3}, \code{Cavalcanti1},
-#'   \code{GrandBudapest1}, \code{GrandBudapest2}, \code{IsleofDogs1}, \code{IsleofDogs2}
+#'   \code{Tenet}, \code{Interstellar},  \code{DarkKnight},
+#'   \code{Inception}, \code{Dunkirk},  \code{Prestige1},  \code{Prestige2}, 
+#'   \code{Prestige3}
 #' @param type Either "continuous" or "discrete". Use continuous if you want
 #'   to automatically interpolate between colours.
 #'   @importFrom graphics rgb rect par image text
@@ -47,10 +43,10 @@ wes_palettes <- list(
 #' @export
 #' @keywords colors
 #' @examples
-#' wes_palette("Royal1")
-#' wes_palette("GrandBudapest1")
-#' wes_palette("Cavalcanti1")
-#' wes_palette("Cavalcanti1", 3)
+#' ChrisNolan_palette("Tenet")
+#' ChrisNolan_palette("GrandBudapest1")
+#' ChrisNolan_palette("Cavalcanti1")
+#' ChrisNolan_palette("Cavalcanti1", 3)
 #'
 #' # If you need more colours than normally found in a palette, you
 #' # can use a continuous palette to interpolate between existing
