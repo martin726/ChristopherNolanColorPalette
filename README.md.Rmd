@@ -7,22 +7,17 @@ output:
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, echo = FALSE}
-
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "figure/",
   fig.height = 1
 )
-
-devtools::install_github("martin726/ChristopherNolanColorPalette")
 ```
 
-# Christopher Nolan Palettes: A Menacing Sea of Dreams
+# Christopher Nolan Palettes
 
-<p align="center">
-![](figure/inception1.gif){#id .class width=150% height=100%}
-</p>
+![](figure/LeoDiCap.png)
 
 > Our plots feel real when we see them. It's only when we add color to them that we realize things were strange - Cobb (probably)
 
@@ -71,9 +66,6 @@ nolan_palettes("DarkKnight")
 ```
 
 ### Inception (2010)
-<p align="center">
-![](figure/inception2.gif){#id .class width=150% height=100%}
-</p>
 
 Cinematography: Wally Pfister
 
@@ -128,3 +120,50 @@ ggplot(heatmap, aes(x = X2, y = X1, fill = value)) +
 
 ```
 
+### The Darjeeling Limited (2007)
+
+```{r, darjeeling}
+wes_palette("Darjeeling1")
+wes_palette("Darjeeling2")
+```
+
+### Hotel Chevalier (2007)
+
+```{r, chevalier}
+wes_palette("Chevalier1")
+```
+
+### Fantastic Mr. Fox (2009)
+
+```{r, fantasticfox}
+wes_palette("FantasticFox1")
+```
+
+### Moonrise Kingdom (2012)
+
+```{r, moonrise}
+wes_palette("Moonrise1")
+wes_palette("Moonrise2")
+wes_palette("Moonrise3")
+```
+
+### Castello Cavalcanti (2013)
+
+```{r, castello}
+wes_palette("Cavalcanti1")
+```
+
+### The Grand Budapest Hotel (2014)
+
+```{r, grandbudapest}
+wes_palette("GrandBudapest1")
+wes_palette("GrandBudapest2")
+```
+
+
+### The Isle of Dogs (2018)
+
+```{r, isleofdogs}
+wes_palette("IsleofDogs1")
+wes_palette("IsleofDogs2")
+```
