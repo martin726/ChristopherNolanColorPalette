@@ -1,6 +1,6 @@
 #' Complete list of palettes
 #'
-#' Use \code{\link{chrisnolan_palettes}} to construct palettes of desired length.
+#' Use \code{\link{nolan_palletes}} to construct palettes of desired length.
 #'
 #' @export
 colorpaletttes <- list(
@@ -101,3 +101,5 @@ print.palette <- function(x, ...) {
 #'
 #' A heatmap example
 "heatmap"
+
+
