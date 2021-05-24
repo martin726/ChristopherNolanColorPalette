@@ -21,8 +21,6 @@ urls.CN <- c("https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/134774431_1276954
 destinations <- c("tenet1.png", "tenet2.png")
 
 
-  
-#
 for(i in seq_along(urls.CN)){
   download.file(urls.CN[i], destfile =  destinations[i])
 } # Worked!!
@@ -41,13 +39,12 @@ for(i in seq_along(urls.IS)){
 } 
 
 ###- Web scrape for the Prestige ####
-
 main.cpp <- read_html("https://indiefilming.com/films/the-prestige")
 
+# Use xpath to obtain multiple urls for images 
 main.cpp.info <-html_elements(main.cpp, xpath='//table[(((count(preceding-sibling::*) + 1) = 18) and parent::*)] | //*[contains(concat( " ", @class, " " ), concat( " ", "entry__article", " " ))]//a//img')
 
 # Remove parts of the strings #
-
 main.cpp.info=str_remove(main.cpp.info, "<img src=\"")
 
 main.cpp.info=str_remove(main.cpp.info, "border=\"0\">")
@@ -58,10 +55,9 @@ main.cpp.info=str_remove(main.cpp.info, " ")
 
 new.cpp.info <- url_encode(unlist(main.cpp.info))
 
-urls.PRESTIGE = new.cpp.info 
+urls.P = new.cpp.info 
 
 ### Create file names for the prestige images ####
-
 filenames.P <- paste0("prestige", seq(1:13), ".png" )
 
 for(i in seq_along(urls.P)){
@@ -103,25 +99,69 @@ for(i in seq_along(urls.DUNKIRK)){
 dunkirk_images <- c("dunkirk1.png", "dunkirk2.png", "dunkirk3.png", "dunkirk4.png", 
                     "dunkirk5.png", "dunkirk6.png")
 
-dunkirk_colpat <- lapply(dunkirk_images, function(x) create_palette(x, number_of_colors=10, type_of_variable = "categorical"))
+dunkirk_colpat <- lapply(dunkirk_images, function(x) create_palette(x, number_of_colors=8, type_of_variable = "categorical"))
 
-##-- The Dark Knight --##
+####-- The Dark Knight ----####
 darkknight1 <- c("darkknight1.png")
 
 dark_knight_colpat <- lapply(darkknight1, function(x) create_palette(x, number_of_colors=10, type_of_variable = "categorical"))
 
-###-- Tenet --###
-
+####-- Tenet ---####
 tenet_images <- c("tenet1.png", "tenet2.png")
 
-tenet_colpat <- lapply(tenet_images, function(x) create_palette(x, number_of_colors=10, type_of_variable = "categorical"))
+tenet_colpat <- lapply(tenet_images, function(x) create_palette(x, number_of_colors=8, type_of_variable = "categorical"))
 
-###-- Interstellar --#####
-
+####-- Interstellar --#####
 interstellar_images <- c("interstellar1.png", "interstellar2.png", "interstellar3.png")
 
-interstellar_colpat <- lapply(interstellar_images, function(x) create_palette(x, number_of_colors=10, type_of_variable = "categorical"))
+interstellar_colpat <- lapply(interstellar_images, function(x) create_palette(x, number_of_colors=8, type_of_variable = "categorical"))
 
-###--- Prestige 1 ---###
+####--- Prestige 1 ---####
+prestige_images <- c("prestige1.png", "prestige2.png", "prestige3.png", "prestige4.png")
+
+prestige_colpat <- lapply(prestige_images, function(x) create_palette(x, number_of_colors=6, type_of_variable="categorical"))
+
+###--- Prestige 2 ---####
+prestige2_images <- c("prestige5.png", "prestige6.png", "prestige7.png", "prestige8.png" )
+
+prestige2_colpat <- lapply(prestige_images, function(x) create_palette(x, number_of_colors=6, type_of_variable="categorical"))
+
+###--- Inception ---####
+
+# Need to download more images from Inception
+
+urls.INC <- c("https://media.hearstapps.com/hmg-prod/images/hbz-best-movies-of-the-decade-inception-everett-1577143815.jpg?crop=3000,1500,offset-x50,offset-y0,safe&width=480&auto=webp&optimize=medium",
+             "https://specials-images.forbesimg.com/imageserve/5f0dba3075efdd00063f9810/960x0.jpg?fit=scale", 
+             "https://s23527.pcdn.co/wp-content/uploads/2014/05/inception-334.jpg.optimal.jpg")
+
+files.INC <- c("inception2.png", "inception3.png", "inception4.png")
+
+for(i in seq_along(urls.INC)){
+  download.file(urls.INC[i], destfile =  files.INC[i])
+}
+
+#--> Obtain color palettes -#
+inception_images <- c("inception1.png", "inception2.png", "inception3.png", "inception4.png")
+
+inception_colpat <- lapply(inception_images, function(x) create_palette(x, number_of_colors=6, type_of_variable = "categorical"))
+
+########################################
+####--- Categorize the palettes  ---####
+
+TenetGroups <- lapply(tenet_colpat, function(x) c(paste(x, collapse=",")))
+
+DarkKnightGroups <- lapply(dark_knight_colpat, function(x) c(paste(x, collapse=",")))
+
+DunkirkGroups <- lapply(dunkirk_colpat, function(x) c(paste(x, collapse=",")))
+
+InceptionGroups <- lapply(inception_colpat, function(x) c(paste(x, collapse=",")))
+
+InterstellarGroup <- lapply(interstellar_colpat, function(x) c(paste(x, collapse=",")))
+
+PrestigeGroups <- lapply(prestige_colpat, function(x) c(paste(x, collapse=",")))
+
+
+
+
 
 
