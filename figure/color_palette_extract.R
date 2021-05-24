@@ -13,6 +13,20 @@ library(lubridate) # Eases DateTime manipulation
 library(stringi)
 library(urltools)
 
+### Image of Christopher Nolan ####
+
+urls.CN2 <- c("https://www.denofgeek.com/wp-content/uploads/2015/02/nolan_1_0.jpg?resize=620%2C432")
+
+filenames.m <- c("mainIMG.png")
+  
+download.file(urls.CN2, destfile = filenames.m)
+
+urls.leoD <- c("https://images.squarespace-cdn.com/content/v1/52d6d1ede4b0b322e9c7a2ea/1594911690090-32LML5W6R6U3E8I0KRNR/ke17ZwdGBToddI8pDm48kFTEgwhRQcX9r3XtU0e50sUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcjVvFZn3_1TpSINbj1p15LLAjcj6UHNkQOuDz3gO52lBvccB2t33iJEaqs_Hdgp_g/image-asset.png?format=2500w")
+
+filenames.l <- c("LeoDiCap.png")
+
+download.file(urls.leoD, filenames.l)
+
 #### Download images for Christopher Nolan ####
 
 urls.CN <- c("https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/134774431_1276954752687511_6855187955520159762_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=a26aad&_nc_ohc=GhX6tKaBG28AX8YWfkJ&_nc_ht=scontent-lax3-2.xx&oh=1086633c5bc6c5b34abb5e3413d1d243&oe=60D15A21",
@@ -148,7 +162,7 @@ inception_colpat <- lapply(inception_images, function(x) create_palette(x, numbe
 ########################################
 ####--- Categorize the palettes  ---####
 
-TenetGroups <- lapply(tenet_colpat, function(x) c(paste(x, collapse=",")))
+TenetGroups <- lapply(tenet_colpat, function(x) paste(x, collapse = ","))
 
 DarkKnightGroups <- lapply(dark_knight_colpat, function(x) c(paste(x, collapse=",")))
 
@@ -160,7 +174,16 @@ InterstellarGroup <- lapply(interstellar_colpat, function(x) c(paste(x, collapse
 
 PrestigeGroups <- lapply(prestige_colpat, function(x) c(paste(x, collapse=",")))
 
+### Images for the main page ####
 
+urls.MP <- c("http://24.media.tumblr.com/tumblr_m89owjRKeZ1qlcv71o1_500.gif",
+             "https://25.media.tumblr.com/tumblr_m89owjRKeZ1qlcv71o6_500.gif")
+
+file.names.GIFs <- c("inception1.gif", "inception2.gif")
+
+for(i in seq_along(urls.MP)){
+  download.file(urls.MP[i], destfile =  file.names.GIFs[i])
+}
 
 
 
