@@ -15,60 +15,78 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Wes Anderson Palettes
+# Christopher Nolan Palettes
 
-[![Build Status](https://travis-ci.org/karthik/wesanderson.png)](https://travis-ci.org/karthik/wesanderson)  
-![CRAN Downloads](http://cranlogs.r-pkg.org/badges/wesanderson)
+![](figure/LeoDiCap.png)
 
-![](rushmore.jpg)
+> Our plots feel real when we see them. It's only when we add color to them that we realize things were strange - Cobb (probably)
 
-> I saved you from boring plots. What did you ever do? - Max Fischer (probably)
-
-Tired of generic mass produced palettes for your plots? Short of adding an owl and dressing up your plot in a bowler hat, here's the most indie thing you can do to one. First round of palettes derived from the amazing Tumblr blog [Wes Anderson Palettes.](http://wesandersonpalettes.tumblr.com/)
+Following in the spirit of the wesanderson package, I created a color palette for plots inspired by the films of Christopher Nolan. Palettes were gathered from websites such as [IndieFilming.com](https://indiefilming.com/people/christopher-nolan), the instagram account [colorpalette.cinema](https://www.instagram.com/colorpalette.cinema/), and the use of webscrapping and screenshots. 
 
 
 ## Installation
 
 ```r
-install.packages("wesanderson")
+install.packages("ChristopherNolanColorPalette")
 ```
 
 __Or the development version__
 
 ```r
-devtools::install_github("karthik/wesanderson")
+devtools::install_github("martin726/ChristopherNolanColorPalette")
 ```
 
 ## Usage
 
 ```{r, palettes_dummy}
-library("wesanderson")
+library("ChristopherNolanColorPalette")
 
 # See all palettes
-names(wes_palettes)
+names(chrisnolan_palette)
 ```
 
 ## Palettes
 
-### Bottle Rocket (1996)
+### The Prestige (2006)
 
-```{r, bottlerocket1}
-wes_palette("BottleRocket1")
-wes_palette("BottleRocket2")
+Cinematography: Wally Pfister
+
+```{r, prestige}
+chrisnolan_palettes("Prestige1")
+chrisnolan_palettes("Prestige2")
+chrisnolan_palettes("Prestige3")
+chrisnolan_palettes("Prestige4")
 ```
 
-### Rushmore (1998)
+### The Dark Knight (2008)
 
-```{r, rushmore}
-wes_palette("Rushmore1")
+Cinematography: Wally Pfister
+
+```{r, darkknight}
+
+chrisnolan_palettes("DarkKnight1")
+
 ```
 
-### The Royal Tenenbaums (2001)
+### Inception (2010)
 
-```{r, royal}
+Cinematography: Wally Pfister
+
+```{r, inception}
+chrisnolan_palettes("Inception1")
+chrisnolan_palettes("Inception2")
+chrisnolan_palettes("Inception3")
+```
+
+### Interstellar (2014)
+
+Cinematography: Hoyte van Hoytema
+
+```{r, interstellar}
 wes_palette("Royal1")
 wes_palette("Royal2")
 ```
+
 
 ```{r, ggplot1, fig.height = 3}
 library("ggplot2")
