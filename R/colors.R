@@ -60,7 +60,7 @@ colorpaletttes <- list(
 #' # colours
 #' pal <- chrisnolan_palette(21, name = "Tenet1", type = "continuous")
 #' image(volcano, col = pal)
-chrisnolan_palettes <- function(name, n, type = c("discrete", "continuous")) {
+nolan_palettes <- function(name, n, type = c("discrete", "continuous")) {
   type <- match.arg(type)
 
   pal <- colorpaletttes[[name]]
