@@ -21,10 +21,13 @@ chrisnolan_palette <- list(
   Dunkirk4 = c("#93806C,#D0D3AF,#C2CCAC,#768F80,#90AF9E,#799A8D,#576E66,#5D8D7C"),
   Dunkirk5 = c("#C5A893,#C69B70,#DDB389,#AC855A,#E2B983,#A78F6C,#EBDDB4,#90886D"),
   Dunkirk6 = c("#672D1E,#A9552F,#834D30,#B26438,#5F3E29,#68432C,#D27B3B,#F0C868"),
+  Prestige1 = c("#524C49,#4E453C,#66625B,#A0B6C1,#91A2AC,#A0ADB7,#A7B9C8,#BCCDDD,#9CA5B2,#9EA2AC"),
+  Prestige2 = c("#3F221D,#775B53,#533329,#3C281E,#695244,#4B3426,#483724,#4D3D26,#6A6450,#C3B878"),
+  Prestige3 = c("#36231C,#6F5448,#382D27,#4F3C2E,#564536,#382A1D,#655342,#544637,#3C2F1E,#4E442E"), 
+  Prestige4 = c("#553A2D,#896B5D,#5C391F,#986642,#815433,#654226,#BB8252,#977654,#756350,#83745E")
+  
+)
 
-  )
-
-DunkirkGroups
 #' A Christopher Nolan palette generator
 #'
 #' These are a handful of color palettes from Christopher Nolan movies. Currently, I only have a hanful of movies, but hope to include his entire filmography
@@ -34,9 +37,11 @@ DunkirkGroups
 #' \href{https://www.instagram.com/colorpalette.cinema/}{colorpalette.cinema}.
 #'   If omitted, uses all colours.
 #' @param name Name of desired palette. Choices are:
-#'   \code{Tenet1}, \code{Tenet2}, \code{Interstellar},  \code{DarkKnight},
-#'   \code{Inception}, \code{Dunkirk},  \code{Prestige1},  \code{Prestige2}, 
-#'   \code{Prestige3}
+#'   \code{DarkKnight}, \code{Inception1}, \code{Inception2},  \code{Inception3},
+#'   \code{Inception4}, \code{Tenet1},  \code{Tenet2},  \code{Interstellar1}, 
+#'   \code{Interstellar2}, \code{Interstellar3}, \code{Dunkirk1}, \code{Dunkirk2},
+#'   \code{Dunkirk3}, \code{Dunkirk4}, \code{Dunkirk5}, \code{Dunkirk6}, \code{Prestige1},
+#'   \code{Prestige2}, \code{Prestige3}, \code{Prestige4}
 #' @param type Either "continuous" or "discrete". Use continuous if you want
 #'   to automatically interpolate between colours.
 #'   @importFrom graphics rgb rect par image text
