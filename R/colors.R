@@ -58,7 +58,7 @@ colorpaletttes <- list(
 #' # If you need more colours than normally found in a palette, you
 #' # can use a continuous palette to interpolate between existing
 #' # colours
-#' pal <- chrisnolan_palette(21, name = "Tenet1", type = "continuous")
+#' pal <- nolan_palette(21, name = "Tenet1", type = "continuous")
 #' image(volcano, col = pal)
 nolan_palettes <- function(name, n, type = c("discrete", "continuous")) {
   type <- match.arg(type)
@@ -101,5 +101,4 @@ print.palette <- function(x, ...) {
 #'
 #' A heatmap example
 "heatmap"
-
 
