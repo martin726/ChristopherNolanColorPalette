@@ -15,9 +15,6 @@ knitr::opts_chunk$set(
   fig.height = 1
 )
 
-devtools::document()
-devtools::install_github("martin726/ChristopherNolanColorPalette")
-
 ```
 
 # Christopher Nolan Palettes: A Menacing Sea of Dreams
@@ -99,7 +96,7 @@ nolan_palettes("Interstellar3")
 ```{r, ggplot1, fig.height = 3}
 library("ggplot2")
 ggplot(mtcars, aes(factor(cyl), fill=factor(vs))) +  geom_bar() +
-  scale_fill_manual(values = chrisnolan_palettes("Interstellar1"))
+  scale_fill_manual(values = nolan_palettes("Interstellar1"))
 ```
 
 ### Dunkirk (2017)
@@ -118,15 +115,4 @@ pal <- nolan_palettes("Interstellar1", 21, type="continuous")
 image(volcano, col = pal)
 ```
 
-```{r, interstellar_heatmap, fig.height = 3}
-pal <- nolan_palettes("Interstellar1", 20, type="continuous") # heatmap is a local dataset
-
-ggplot(heatmap, aes(x = X2, y = X1, fill = value)) +
-  geom_tile() + 
-  scale_fill_gradientn(colors = pal) + 
-  scale_x_discrete(expand = c(0, 0)) +
-  scale_y_discrete(expand = c(0, 0)) + 
-  coord_equal() 
-
-```
 
