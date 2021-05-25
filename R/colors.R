@@ -4,14 +4,14 @@
 #'
 #' @export
 colorpaletttes <- list(
-  
-  DarkKnight = c("#C7C284", "#2A6A5C", "#81C4BA", "#3D575C", "#3B6874", "#A1D2E2", "#44BDE6", "#0F3C59", "#2573A8", "#01387D"), 
+
+  DarkKnight = c("#C7C284", "#2A6A5C", "#81C4BA", "#3D575C", "#3B6874", "#A1D2E2", "#44BDE6", "#0F3C59", "#2573A8", "#01387D"),
   Inception1 = c("#742A1D", "#7C4C39", "#582B19" ,"#5D544B", "#566942" , "#363F44"),
   Inception2 = c("#8F826F" , "#7B715F", "#635E48", "#4F4F42","#4C4F3B","#307998"),
   Inception3 = c("#814523","#BFA182","#9F8465","#D5B48F","#CBB193","#7F613C"),
-  Inception4 = c("#4A473B","#B7BEB1","#A6AEA2","#555D69","#383B41","#33373E"), 
+  Inception4 = c("#4A473B","#B7BEB1","#A6AEA2","#555D69","#383B41","#33373E"),
   Tenet1     = c("#012949","#1E105A","#4A0768","#330438","#6F0269","#72144C","#390416","#500101"),
-  Tenet2     = c("#723E13","#83542B","#705B3A","#6C6450","#485E58","#47625C","#4E6E68","#2E625E"), 
+  Tenet2     = c("#723E13","#83542B","#705B3A","#6C6450","#485E58","#47625C","#4E6E68","#2E625E"),
   Interstellar1 = c("#39342B","#6C8988","#323E3E","#A1B4B8","#0F4151","#194B5D","#283439","#1F3D49","#2E5363","#454F57"),
   Interstellar2 = c("#C47C6E","#A55238","#9B5C45","#6E5243","#BA977B","#755B42","#58442B","#36494A","#1E454C","#3C4D53"),
   Interstellar3 = c("#734D47","#B68E86","#733625","#EACAB3","#F9E0C6","#D8C8B4","#375359","#7C5E61","#925E62","#895455"),
@@ -23,7 +23,7 @@ colorpaletttes <- list(
   Dunkirk6 = c("#672D1E","#A9552F","#834D30","#B26438","#5F3E29","#68432C","#D27B3B","#F0C868"),
   Prestige1 = c("#524C49","#4E453C","#66625B","#A0B6C1","#91A2AC","#A0ADB7","#A7B9C8","#BCCDDD","#9CA5B2","#9EA2AC"),
   Prestige2 = c("#3F221D","#775B53","#533329","#3C281E","#695244","#4B3426","#483724","#4D3D26","#6A6450","#C3B878"),
-  Prestige3 = c("#36231C","#6F5448","#382D27","#4F3C2E","#564536","#382A1D","#655342","#544637","#3C2F1E","#4E442E"), 
+  Prestige3 = c("#36231C","#6F5448","#382D27","#4F3C2E","#564536","#382A1D","#655342","#544637","#3C2F1E","#4E442E"),
   Prestige4 = c("#553A2D","#896B5D","#5C391F","#986642","#815433","#654226","#BB8252","#977654","#756350","#83745E")
 )
 
@@ -31,13 +31,13 @@ colorpaletttes <- list(
 #'
 #' These are a handful of color palettes from Christopher Nolan movies. Currently, I only have a hanful of movies, but hope to include his entire filmography
 #'
-#' @param n Number of colors desired. Color schemes come from the website 
+#' @param n Number of colors desired. Color schemes come from the website
 #'   \href{https://indiefilming.com/people/christopher-nolan/}{Indie Film} and others are from from the instagram page
 #' \href{https://www.instagram.com/colorpalette.cinema/}{colorpalette.cinema}.
 #'   If omitted, uses all colours.
 #' @param name Name of desired palette. Choices are:
 #'   \code{DarkKnight}, \code{Inception1}, \code{Inception2},  \code{Inception3},
-#'   \code{Inception4}, \code{Tenet1},  \code{Tenet2},  \code{Interstellar1}, 
+#'   \code{Inception4}, \code{Tenet1},  \code{Tenet2},  \code{Interstellar1},
 #'   \code{Interstellar2}, \code{Interstellar3}, \code{Dunkirk1}, \code{Dunkirk2},
 #'   \code{Dunkirk3}, \code{Dunkirk4}, \code{Dunkirk5}, \code{Dunkirk6}, \code{Prestige1},
 #'   \code{Prestige2}, \code{Prestige3}, \code{Prestige4}
@@ -53,7 +53,7 @@ colorpaletttes <- list(
 #' chrisnolan_palette("Interstellar1")
 #' chrisnolan_palette("Interstellar2")
 #' chrisnolan_palette("DarkKnight")
-#' 
+#'
 #'
 #' # If you need more colours than normally found in a palette, you
 #' # can use a continuous palette to interpolate between existing
@@ -80,6 +80,8 @@ nolan_palettes <- function(name, n, type = c("discrete", "continuous")) {
     discrete = pal[1:n]
   )
   structure(out, class = "palette", name = name)
+
+  out
 }
 
 #' @export
