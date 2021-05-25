@@ -3,7 +3,7 @@ Christopher Nolan Palettes: A Menacing Sea of Dreams
 ====================================================
 
 <p align="center">
-<img src="figure/inception1.gif" id="id" class="class" style="width:200.0%" style="height:200.0%" />
+<img src="figure/inception1.gif" id="id" class="class" style="width:150.0%" style="height:100.0%" />
 </p>
 
 > Our plots feel real when we see them. It's only when we add color to them that we realize things were strange - Cobb (probably)
