@@ -3,8 +3,9 @@ Christopher Nolan Palettes: A Menacing Sea of Dreams
 ====================================================
 
 <p align="center">
-<img src="figure/inception1.gif" id="id" class="class" style="width:150.0%" style="height:100.0%" />
+<img src="figure/inception1.gif" id="id" class="class" style="width:200.0%" style="height:200.0%" />
 </p>
+
 > Our plots feel real when we see them. It's only when we add color to them that we realize things were strange - Cobb (probably)
 
 Following in the spirit of the wesanderson package, I created a color palette for plots inspired by the films of Christopher Nolan. Palettes were gathered from websites such as [IndieFilming.com](https://indiefilming.com/people/christopher-nolan), the instagram account [colorpalette.cinema](https://www.instagram.com/colorpalette.cinema/), and the use of webscrapping and screenshots.
