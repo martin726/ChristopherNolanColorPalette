@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Christopher Nolan Palettes: A Menacing Sea of Dreams
+Christopher Nolan Palettes: A Menacing Dream of Colors
 ====================================================
 
 <p align="center">
