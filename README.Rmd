@@ -6,7 +6,7 @@ output:
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, include=FALSE}
 
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 # Christopher Nolan Palettes: A Menacing Sea of Dreams
 
 <p align="center">
-![](figure/inception1.gif){#id .class width=150% height=100%}
+![](figure/inception1.gif){#id .class width=200% height=100%}
 </p>
 
 > Our plots feel real when we see them. It's only when we add color to them that we realize things were strange - Cobb (probably)
