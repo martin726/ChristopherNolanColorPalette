@@ -108,8 +108,7 @@ nolan_palettes("Inception3")
 
 <p align="center">
 <img src="figure/interstellar1.png" id="id" class="class" style="width:90.0%" style="height:90.0%" />
-</p>
-<p align="center">
+
 <img src="figure/interstellar2.png" id="id" class="class" style="width:90.0%" style="height:90.0%" />
 </p>
 ``` r

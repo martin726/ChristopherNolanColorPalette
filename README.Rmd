@@ -92,11 +92,10 @@ nolan_palettes("Inception3")
 
 <p align="center">
 ![](figure/interstellar1.png){#id .class width=90% height=90%}
-</p>
 
-<p align="center">
 ![](figure/interstellar2.png){#id .class width=90% height=90%}
 </p>
+
 
 ```{r, interstellar}
 nolan_palettes("Interstellar1")
