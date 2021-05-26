@@ -13,12 +13,14 @@ library(lubridate) # Eases DateTime manipulation
 library(stringi)
 library(urltools)
 
+library(ChristopherNolanColorPalette)
+
 ### Image of Christopher Nolan ####
 
 urls.CN2 <- c("https://www.denofgeek.com/wp-content/uploads/2015/02/nolan_1_0.jpg?resize=620%2C432")
 
 filenames.m <- c("mainIMG.png")
-  
+
 download.file(urls.CN2, destfile = filenames.m)
 
 urls.leoD <- c("https://images.squarespace-cdn.com/content/v1/52d6d1ede4b0b322e9c7a2ea/1594911690090-32LML5W6R6U3E8I0KRNR/ke17ZwdGBToddI8pDm48kFTEgwhRQcX9r3XtU0e50sUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcjVvFZn3_1TpSINbj1p15LLAjcj6UHNkQOuDz3gO52lBvccB2t33iJEaqs_Hdgp_g/image-asset.png?format=2500w")
@@ -42,7 +44,7 @@ for(i in seq_along(urls.CN)){
 #####--- Download more images for Christopher Nolan movies ---######
 
 ### InterStellar images ####
-urls.IS <- c("https://i.pinimg.com/originals/e5/01/43/e50143ca5020eadbc67addf1b481c608.jpg", 
+urls.IS <- c("https://i.pinimg.com/originals/e5/01/43/e50143ca5020eadbc67addf1b481c608.jpg",
              "https://i.pinimg.com/originals/01/2e/31/012e316e75213f8c1e2ce0aeb052a293.jpg",
              "https://i.pinimg.com/originals/0e/6f/80/0e6f80594666aae10c048803deefa448.jpg")
 
@@ -50,12 +52,12 @@ file.names.IS <- paste0("interstellar", seq(1:3), ".png")
 
 for(i in seq_along(urls.IS)){
   download.file(urls.IS[i], destfile =  file.names.IS[i])
-} 
+}
 
 ###- Web scrape for the Prestige ####
 main.cpp <- read_html("https://indiefilming.com/films/the-prestige")
 
-# Use xpath to obtain multiple urls for images 
+# Use xpath to obtain multiple urls for images
 main.cpp.info <-html_elements(main.cpp, xpath='//table[(((count(preceding-sibling::*) + 1) = 18) and parent::*)] | //*[contains(concat( " ", @class, " " ), concat( " ", "entry__article", " " ))]//a//img')
 
 # Remove parts of the strings #
@@ -69,7 +71,7 @@ main.cpp.info=str_remove(main.cpp.info, " ")
 
 new.cpp.info <- url_encode(unlist(main.cpp.info))
 
-urls.P = new.cpp.info 
+urls.P = new.cpp.info
 
 ### Create file names for the prestige images ####
 filenames.P <- paste0("prestige", seq(1:13), ".png" )
@@ -96,7 +98,7 @@ dunkirk.nodes=str_remove(dunkirk.nodes, " ")
 
 dunkirkIMG.info <- url_encode(unlist(dunkirk.nodes))
 
-urls.DUNKIRK = dunkirkIMG.info 
+urls.DUNKIRK = dunkirkIMG.info
 
 ### Create file names for the new Dunkirk images ####
 
@@ -110,7 +112,7 @@ for(i in seq_along(urls.DUNKIRK)){
 #### Let's get color palette codes for each image ####
 
 ##-- Dunkirk --##
-dunkirk_images <- c("dunkirk1.png", "dunkirk2.png", "dunkirk3.png", "dunkirk4.png", 
+dunkirk_images <- c("dunkirk1.png", "dunkirk2.png", "dunkirk3.png", "dunkirk4.png",
                     "dunkirk5.png", "dunkirk6.png")
 
 dunkirk_colpat <- lapply(dunkirk_images, function(x) create_palette(x, number_of_colors=8, type_of_variable = "categorical"))
@@ -145,7 +147,7 @@ prestige2_colpat <- lapply(prestige_images, function(x) create_palette(x, number
 # Need to download more images from Inception
 
 urls.INC <- c("https://media.hearstapps.com/hmg-prod/images/hbz-best-movies-of-the-decade-inception-everett-1577143815.jpg?crop=3000,1500,offset-x50,offset-y0,safe&width=480&auto=webp&optimize=medium",
-             "https://specials-images.forbesimg.com/imageserve/5f0dba3075efdd00063f9810/960x0.jpg?fit=scale", 
+             "https://specials-images.forbesimg.com/imageserve/5f0dba3075efdd00063f9810/960x0.jpg?fit=scale",
              "https://s23527.pcdn.co/wp-content/uploads/2014/05/inception-334.jpg.optimal.jpg")
 
 files.INC <- c("inception2.png", "inception3.png", "inception4.png")
