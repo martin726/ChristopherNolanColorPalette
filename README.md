@@ -43,7 +43,7 @@ Palettes
 
 ### The Prestige (2006)
 
-Cinematography: Wally Pfister
+#### Cinematography: Wally Pfister
 
 ``` r
 nolan_palettes("Prestige1")
@@ -60,9 +60,9 @@ nolan_palettes("Prestige2")
 ### The Dark Knight (2008)
 
 <p align="center">
-<img src="figure/darkknight1.png" id="id" class="class" style="width:200.0%" style="height:100.0%" />
+<img src="figure/darkknight1.png" id="id" class="class" style="width:90.0%" style="height:90.0%" />
 </p>
-Cinematography: Wally Pfister
+#### Cinematography: Wally Pfister
 
 ``` r
 
@@ -77,7 +77,7 @@ nolan_palettes("DarkKnight1")
 <p align="center">
 <img src="figure/inception2.gif" id="id" class="class" style="width:150.0%" style="height:100.0%" />
 </p>
-Cinematography: Wally Pfister
+#### Cinematography: Wally Pfister
 
 ``` r
 nolan_palettes("Inception1")
@@ -99,8 +99,14 @@ nolan_palettes("Inception3")
 
 ### Interstellar (2014)
 
-Cinematography: Hoyte van Hoytema
+#### Cinematography: Hoyte van Hoytema
 
+<p align="center">
+<img src="figure/interstellar1.png" id="id" class="class" style="width:90.0%" style="height:90.0%" />
+</p>
+<p align="center">
+<img src="figure/interstellar2.png" id="id" class="class" style="width:90.0%" style="height:90.0%" />
+</p>
 ``` r
 nolan_palettes("Interstellar1")
 ```
@@ -149,9 +155,10 @@ nolan_palettes("Dunkirk4")
 
 ![](figure/dunkirk-3.png)
 
-``` r
+The Dark Knight 2 Color Palette (The Joker)
 
-pal <- nolan_palettes("Interstellar1", 21, type="continuous")
+``` r
+pal <- nolan_palettes("DarkKnight2", 21, type="continuous")
 image(volcano, col = pal)
 ```
 

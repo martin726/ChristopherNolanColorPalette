@@ -14,7 +14,6 @@ knitr::opts_chunk$set(
   fig.path = "figure/",
   fig.height = 1
 )
-
 ```
 
 # Christopher Nolan Palettes: A Menacing Sea of Dreams
@@ -53,7 +52,7 @@ names(colorpaletttes)
 
 ### The Prestige (2006)
 
-Cinematography: Wally Pfister
+#### Cinematography: Wally Pfister
 
 ```{r, prestige}
 nolan_palettes("Prestige1")
@@ -63,10 +62,10 @@ nolan_palettes("Prestige2")
 ### The Dark Knight (2008)
 
 <p align="center">
-![](figure/darkknight1.png){#id .class width=200% height=100%}
+![](figure/darkknight1.png){#id .class width=90% height=90%}
 </p>
 
-Cinematography: Wally Pfister
+#### Cinematography: Wally Pfister
 
 ```{r, darkknight}
 
@@ -79,7 +78,7 @@ nolan_palettes("DarkKnight1")
 ![](figure/inception2.gif){#id .class width=150% height=100%}
 </p>
 
-Cinematography: Wally Pfister
+#### Cinematography: Wally Pfister
 
 ```{r, inception}
 nolan_palettes("Inception1")
@@ -89,14 +88,21 @@ nolan_palettes("Inception3")
 
 ### Interstellar (2014)
 
-Cinematography: Hoyte van Hoytema
+#### Cinematography: Hoyte van Hoytema
+
+<p align="center">
+![](figure/interstellar1.png){#id .class width=90% height=90%}
+</p>
+
+<p align="center">
+![](figure/interstellar2.png){#id .class width=90% height=90%}
+</p>
 
 ```{r, interstellar}
 nolan_palettes("Interstellar1")
 nolan_palettes("Interstellar2")
 nolan_palettes("Interstellar3")
 ```
-
 
 ```{r, ggplot1, fig.height = 3}
 library("ggplot2")
@@ -114,9 +120,9 @@ nolan_palettes("Dunkirk3")
 nolan_palettes("Dunkirk4")
 ```
 
+The Dark Knight 2 Color Palette (The Joker)
 ```{r, volcano, fig.height = 5}
-
-pal <- nolan_palettes("Interstellar1", 21, type="continuous")
+pal <- nolan_palettes("DarkKnight2", 21, type="continuous")
 image(volcano, col = pal)
 ```
 
