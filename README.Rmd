@@ -70,7 +70,7 @@ nolan_palettes("Prestige2")
 ```{r, darkknight}
 
 nolan_palettes("DarkKnight1")
-nolan_palettes("DarkKnight1")
+nolan_palettes("DarkKnight2")
 ```
 
 ### Inception (2010)

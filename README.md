@@ -67,10 +67,15 @@ nolan_palettes("Prestige2")
 ``` r
 
 nolan_palettes("DarkKnight1")
-nolan_palettes("DarkKnight1")
 ```
 
 ![](figure/darkknight-1.png)
+
+``` r
+nolan_palettes("DarkKnight2")
+```
+
+![](figure/darkknight-2.png)
 
 ### Inception (2010)
 
