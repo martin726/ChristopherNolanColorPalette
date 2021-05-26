@@ -30,11 +30,12 @@ library("ChristopherNolanColorPalette")
 
 # See all palettes
 names(colorpaletttes)
-#>  [1] "DarkKnight"    "Inception1"    "Inception2"    "Inception3"   
-#>  [5] "Inception4"    "Tenet1"        "Tenet2"        "Interstellar1"
-#>  [9] "Interstellar2" "Interstellar3" "Dunkirk1"      "Dunkirk2"     
-#> [13] "Dunkirk3"      "Dunkirk4"      "Dunkirk5"      "Dunkirk6"     
-#> [17] "Prestige1"     "Prestige2"     "Prestige3"     "Prestige4"
+#>  [1] "DarkKnight1"   "DarkKnight2"   "Inception1"    "Inception2"   
+#>  [5] "Inception3"    "Inception4"    "Tenet1"        "Tenet2"       
+#>  [9] "Interstellar1" "Interstellar2" "Interstellar3" "Dunkirk1"     
+#> [13] "Dunkirk2"      "Dunkirk3"      "Dunkirk4"      "Dunkirk5"     
+#> [17] "Dunkirk6"      "Prestige1"     "Prestige2"     "Prestige3"    
+#> [21] "Prestige4"
 ```
 
 Palettes
@@ -58,11 +59,15 @@ nolan_palettes("Prestige2")
 
 ### The Dark Knight (2008)
 
+<p align="center">
+<img src="figure/darkknight1.png" id="id" class="class" style="width:200.0%" style="height:100.0%" />
+</p>
 Cinematography: Wally Pfister
 
 ``` r
 
-nolan_palettes("DarkKnight")
+nolan_palettes("DarkKnight1")
+nolan_palettes("DarkKnight1")
 ```
 
 ![](figure/darkknight-1.png)
