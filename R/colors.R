@@ -3,7 +3,7 @@
 #' Use \code{\link{nolan_palletes}} to construct palettes of desired length.
 #'
 #' @export
-colorpaletttes <- list(
+colorpalettes <- list(
   DarkKnight1 = c("#2F3133", "#1E2529", "#171D20", "#C49921", "#44BDE6",
                   "#2573A8", "#003367","#00224E","#001A38"),
   DarkKnight2 = c("#CDA4F6","#8000FF", "#C60000", "#FFE5CC",
@@ -73,7 +73,7 @@ colorpaletttes <- list(
 nolan_palettes <- function(name, n, type = c("discrete", "continuous")) {
   type <- match.arg(type)
 
-  pal <- colorpaletttes[[name]]
+  pal <- colorpalettes[[name]]
   if (is.null(pal))
     stop("Palette not found.")
 
